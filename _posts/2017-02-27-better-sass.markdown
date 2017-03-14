@@ -1,27 +1,157 @@
 ---
 layout: post
-title:  "Better SASS"
+title:  "4 Ways to Improve Your SASS"
 date:   2017-02-27 21:18:16 -0800
 categories: sass css scss 
 ---
-# Improving your SASS 
+
+## 1. Adopt a Methodology
+
+The sooner you can choose (and stick to) a SASS methodology in your web development career, the better. It'll make your styles more maintainable, easier to read, easier to pass to other developers, and your future self will thank you. 
+
+There are a bunch of SASS methodologies out there and, at their core, they follow basic CSS best-practices. Two of the most popular methodologies are BEM and SMACSS. After trying both BEM and SMACSS, I've developed my personal blend of the two -- BEM naming conventions mixed with SMACSS modularization and categorization of partials. Here are some links I found helpful:
+
+1. [Intro to BEM and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
+2. [Meaningful CSS] (https://alistapart.com/article/meaningful-css-style-like-you-mean-it)
+3. [BEM 101](https://css-tricks.com/bem-101/)
 
 
+### Notes on BEM
 
-## Modularization
-Modular SASS allows for more scalable, maintainable, and re-useable CSS.
+__B__lock __E__lement __M__odifier
 
-## Adopting a Methodology
-Styles shouldn't depend on HTML structure -- should be as 'flat' as possible. 
-Bad: header nav .navbar {}
-Good: .main-navbar {}
-Better: [role=''] {}
+`.block__element--modifier`
+
+Abstract your CSS styles into three distinct classes: block classes, element classes, modifier classes.
+
+First, define the block -- the highest level of abstraction that contain child elements.
+
+Modifiers can modify both blocks (.block--modifier) and elements (.block__element--modifier)
+
+The double underscore and double hyphen allows us to clearly delimit each part of the BEM selector. 
+
+Class names are expressive -- they convey information about their context and how they're used. This helps other developers know what's going on, and it can greatly assist in code readability.
+
+Naming can be subjective. My idea of a module may be different than your idea of a module, but the principle should remain the same -- blocks should have no HTML dependancies. Goal: to be able reuse blocks and apply styles independent of location.
+
+Not everything needs to be defined with BEM naming convention -- only blocks that would be useful in another context. 
+
+Other BEM practices (and general CSS best-practices): 
+
+ - avoid nesting so styles are not HTML dependent
+ - keep selectors "shallow"
+ - use element selectors, meta-field selectors, and classes over ids
+ - avoid `!important`
 
 
+With SASS 3.0+, The following will spit out child elements that are not dependent on the parent. 
 
-## Adopt Coding Standards
+```
+.list {
+    &__item{
+        a {
+        color: green;
+        }
+    
+    }
+    &__item--end{ 
+    
+    }
+    &__item--current{
+        a {
+        color: black;
+        }
+    }
+}
 
-Agree on some simple standards for each language you use. 
+```
+
+Mixin to make writing BEM selectors easier:
+
+```
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+.list {
+    @include e(item){
+        a {
+            color: green;
+        }
+        @include m(current){
+            color: red;
+        }   
+    }
+}
+```
+
+## 2. Modularization and DRY code
+
+Instead of writing all your SASS in a single, overflowing file, break up the code into smaller, more maintainable chunks. These smaller chunks are called _partials_ and here's my current preferred method to organizing them:
+
+### SMACSS-inspired Categories for Partials*:
+
+**Note: these are not the official SMACSS categories. I've adjusted them to meet my needs building WordPress themes.*
+
+- Base
+- Templates
+- Modules (reusable components)
+- Vendor
+- States
+
+__Base__: No class or ID selectors. Stick to element selectors. Includes any utilities such as partials, variables, and mixins. 
+
+- ` h1, h2, h3, h4, h5, h6, p, a, body, html, blockquote, *`, etc.
+
+__Layout__: header, footer, sidebar, etc. 
+
+- `.container, sidebar, header, footer, panel, main-content`, etc.
+
+__Modules__: sit inside a layout, can be reused other places and have no parent dependancies
+
+- `buttons, extends, forms, headlines, icons, img, nav, navbar`, etc. 
+- each partial represents a stand-alone module
+
+__Vendor__: styles from third-parties
+
+__States__: styles that affect a module's state (e.g. `.is-hidden, .is-red`, etc.)
+
+Each directory has `index.scss` that imports the partials with in that directory. Each partial has it's own corresponding media queries.
+
+### DRY SASS
+
+[DRYing Out Your SASS Mixins](https://alistapart.com/article/dry-ing-out-your-sass-mixins)
+
+Use placeholder selectors to make code DRYer. This helps clean up the html classes, too. Can reduce `.btn .btn--green .btn--active` to just the last class. The placeholder will have the hover and focus states defined.
+
+```
+%nav-item-disp {
+ ...
+}
+%nav-item-link {
+ ...
+}
+%nav-item-on {
+ ...
+}
+%screen-reader-only {
+ ...
+}
+```
+
+## 3. Adopt Coding Standards
+
+Agree on some simple standards for each language you use. Here's a slimmed down version of  WordPress's core-contributor coding standards.
+
+This will make your code easier to maintain, read, debug, etc, and it's essential if you're working on a team.
 
 
 PHP: 
@@ -51,215 +181,22 @@ CSS:
 - Avoid adding a unit on a zero value
 - Commenting:
 
-		/**
-		* #.# Section title
-		*
-		* Description of section, whether or not it has media queries, etc.
-		*/
-		
-		/* This is a comment about a selector */
-		
+        /**
+        * #.# Section title
+        *
+        * Description of section, whether or not it has media queries, etc.
+        */
+        
+        /* This is a comment about a selector */
+        
 
 
 
-WP coding standards
-editorconfig.org
+## 4. Leverage Task-runner Tools
 
-## Compiling
-Source Maps
-Auto-prefixer
-Linting
-Pixels to Ems via Gulp
+These are some Gulp plugins that will take your SASS to the next level. They're also available for Grunt.
 
-
-
-
-
-
-
-
-### Sass maps
-
-$ui-colors: (
-    default : $fountain-blue;
-    success : $emerald;
-    error  : $sunglow;
-    warning : $coral;
-    info : $purple;
-)
-// Mixins
-
-@mixin bg-colors($map) {
-    @each $theme, $color in $map {
-        &--#{$theme} {
-            background-color: $color;
-        }
-    }
-}
-
-called:
-.btn {
-    @include bg-colors($ui-colors);
-}
-
-### nest maps:
-
-Creating your custom CSS coding guideline:
-1. Set goals
-    
-    - modular
-    - not html dependent
-    - easily reused within a project, or even, in other projects without extra dependancies
-    - semantic
-    - minimize contextual css -- css that's dependent on a parent. when styles are tightly coupled to the DOM will increase the chance of changes to the HTML breaking our layout. shallow', minimum nesting,
-    - avoiding id selectors and using !important
-    - maximize CSS reuse-ability both within a theme and with other themes
-    - make projects easier to pass between developers. come up with guidelines / recommendations for CSS coding standards to encourage consistency without discouraging experimentation. Maybe come up with a list of best practices for devs to loosely follow. 
-    - goal is not to have the cleanest, most minimalist markup, or 
-
-
-2. While we're at it, let's define some coding standards -- let's loosely follow WP's coding standards
-
-    - indentation char: space
-    - css indentation: 2 spaces
-    - php indentation: 4 spaces
-
-
-##BEM 
-*BEM naming conventions, SMACSS categorization conventions*
-Block Element Modifier
-
-Abstract our CSS styles into three distinct classes: block classes, element classes, modifier classes.
-
-First, define the block -- the highest level of abstraction that contain child elements.
-
-Modifiers can modify both blocks (.block--modifier) and elements (.block__element--modifier)
-
-The double underscore and double hyphen allows us to clearly delimit each part of the BEM selector. 
-
-
-class names convey information about the 
-context is in the name of the selector
-
-
-can be subjective. my idea of a module may be different than your idea of a module
-blocks should be able to be used in other projects without dependancies
-
-
-not everything needs to be defined with BEM naming convention -- only blocks that would be useful in another context. not necessary with blocks that are not reused
-
-Benifit to lengthy class names: this type of class notation is expressive which helps other devs know what they mean / what is going on. can greatly assist in readabilty
-
-
-.nav {
-   &  
-}
-
-break something into a module / block only if it'd be useful in another context
-communicate what a block of HTML does just from it's naming convention, and selectors are easier to understand because we provide the context directly into the selector
-avoid nesting so styles are not html dependent. shallow. classes over ids. 
-goal: to be able to apply styles independent of location
-.block__element--modifier
-
-The following will spit out child elements that are not dependent on the parent. 
-
-```
-.list {
-    &__item{
-        a {
-        color: green;
-        }
-    
-    }
-    &__item--end{ 
-    
-    }
-    &__item--current{
-        a {
-        color: black;
-        }
-    }
-}
-
-```
-
-Mixin to make writing BEM selectors easier:
-
-@mixin e($element) {
-    &__#{$element} {
-        @content;
-    }
-}
-
-@mixin m($modifier) {
-    &--#{$modifier} {
-        @content;
-    }
-}
-
-.list {
-    @include e(item){
-        a {
-            color: green;
-        }
-        @include m(current){
-            color: red;
-        }   
-    }
-}
-
-Placeholder selectors to make code DRYer. This helps clean up the html classes, too. Can reduce `.btn .btn--green .btn--active` to just the last class.
-
-%nav-item-disp {
-
-}
-%nav-item-link {
-
-}
-%nav-item-on {
-}
-
-
-Use %btn to extend btn classes to btn elements. the placeholder will have the hover and focus states defined
-%sro -- screen reader only class
-.form {
-    &__label{
-        &--hidden {
-            @extend .sro;
-        }
-    display: block;
-    etc...
-    }
-}
-
-
-###SMACSS Categorization:
-Base, Layout, Module rules (reusable components), State Rules
-
-Base styles -- no classes or id selectors. Stick to element selectors
-Layout: header, footer, sidebar
-Modules: sit inside a layout, can be reused other places, and have no parent dependancies
-Directories in sass:
-*each directory has index.scss that imports partials. Can use globbing.
-
-Base:
-
--   h1,h2,h3,h4,h5,h6,p,a,body,*
-
-Layout:
-
-- .container, sidebar, header, footer, panel, main-content
-
-Modules:
-
-- buttons,extends, forms, headlines, icond, img, nav, navbar 
-- no knowledge of parent container
-- each partial represents a stand-alone module
-- extends has all placeholders, important to keep them from getting obscured when working on teams
-
-Utilites:
-
-- mixins, functions, variables, 
-
-## Questions 
-Better to import WP google fonts via functions file, or style file?
+ - [Source Maps](https://www.npmjs.com/package/gulp-sourcemaps)
+ - [Auto-prefixer](https://www.npmjs.com/package/gulp-autoprefixer)
+ - [SASS Linting](https://www.npmjs.com/package/gulp-sass-lint)
+ - [Pixels to Ems](https://www.npmjs.com/package/gulp-pixrem)

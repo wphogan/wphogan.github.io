@@ -2,7 +2,7 @@
 layout: post
 title:  "Notes on Inclusive Design Patterns"
 date:   2017-02-27 21:18:16 -0800
-categories: jekyll update
+categories: accessibility
 ---
 #Inclusive Design Patterns
 ##Coding Accessibility Into Web Design
