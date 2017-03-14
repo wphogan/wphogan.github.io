@@ -3,7 +3,7 @@ layout: post
 title: Learning 100 things in 100 days
 categories: learning
 ---
-##Goal: learn at least one thing related to WordPress or building websites everyday for the next 100 days and document it here.
+## Goal: learn at least one thing related to WordPress or building websites everyday for the next 100 days and document it here.
 
 ### March
 

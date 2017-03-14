@@ -12,13 +12,11 @@ The sooner you can choose (and stick to) a SASS methodology in your web developm
 There are a bunch of SASS methodologies out there and, at their core, they follow basic CSS best-practices. Two of the most popular methodologies are BEM and SMACSS. After trying both BEM and SMACSS, I've developed my personal blend of the two -- BEM naming conventions mixed with SMACSS modularization and categorization of partials. Here are some links I found helpful:
 
 1. [Intro to BEM and SMACSS](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
-2. [Meaningful CSS] (https://alistapart.com/article/meaningful-css-style-like-you-mean-it)
+2. [Meaningful CSS](https://alistapart.com/article/meaningful-css-style-like-you-mean-it)
 3. [BEM 101](https://css-tricks.com/bem-101/)
 
 
 ### Notes on BEM
-
-__B__lock __E__lement __M__odifier
 
 `.block__element--modifier`
 
@@ -46,7 +44,7 @@ Other BEM practices (and general CSS best-practices):
 
 With SASS 3.0+, The following will spit out child elements that are not dependent on the parent. 
 
-```
+{% highlight sass %}
 .list {
     &__item{
         a {
@@ -63,8 +61,9 @@ With SASS 3.0+, The following will spit out child elements that are not dependen
         }
     }
 }
+{% endhighlight %}
 
-```
+
 
 Mixin to make writing BEM selectors easier:
 
