@@ -9,8 +9,13 @@ categories: learning
 
 __March, 14 2017:__
 
-- temp
-- tags: `temp`
+- Three levels of [WCAG](https://www.w3.org/WAI/intro/wcag) 
+    
+     - Level A: inpacts a very large number of users. This is typically the bare minimum requirements for calling a site "accessible". Includes providing a text based alternative to non-text content like images, and being able to navigate a site with a keyboard.
+     - Level AA: impacts less users than Level A. You should be hitting all these, too. Includes writing headings and lables describing the relevant content.
+     - Level AAA: even more specific. Not applicable to every project. Includes providing accessible alternatives to live, audio-only content. 
+    
+- tags: `accessiblity`
 
 __March, 15 2017:__
 
