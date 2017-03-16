@@ -7,20 +7,49 @@ categories: learning
 
 ### March
 
-__March, 14 2017:__
-
-- Three levels of [WCAG](https://www.w3.org/WAI/intro/wcag) 
+__March, 14 2017:__ Three levels of [WCAG](https://www.w3.org/WAI/intro/wcag) 
     
-     - Level A: inpacts a very large number of users. This is typically the bare minimum requirements for calling a site "accessible". Includes providing a text based alternative to non-text content like images, and being able to navigate a site with a keyboard.
-     - Level AA: impacts less users than Level A. You should be hitting all these, too. Includes writing headings and lables describing the relevant content.
-     - Level AAA: even more specific. Not applicable to every project. Includes providing accessible alternatives to live, audio-only content. 
+- Level A: impacts a very large number of users. This is typically the bare minimum requirements for calling a site "accessible". Includes providing a text based alternative to non-text content like images, and being able to navigate a site with a keyboard.
+- Level AA: impacts less users than Level A. You should be hitting all these, too. Includes writing headings and labels describing the relevant content.
+- Level AAA: even more specific. Not applicable to every project. Includes providing accessible alternatives to live, audio-only content. 
     
-- tags: `accessiblity`
+- tags: `accessibility`
 
-__March, 15 2017:__
+__March, 15 2017:__ PHP Output Buffers are awesome
 
-- temp
-- tags: `temp`
+- PHP output buffer prevents functions from echoing data. For example, the following WordPress code will echo the ID only once:
+
+		ob_start();
+		the_ID();
+		$id = ob_get_clean();
+ 	  	echo $id;  
+ 	  	
+- Main PHP output buffer functions:
+	- `ob_start();` 	starts the buffer
+	- `ob_get_contents();` returns the contents of the buffer and allows it to keep running and collecting data
+	- `ob_clean();` clears the buffer
+	- `ob_end_clean();` stops and clears the buffer
+	- `ob_get_clean();` fetches the contents of the buffer, clears the buffer, and stops the buffer
+- Why is this awesome? Because it allows us to generate a lot of raw HTML without having to use quotes or other work arounds.  
+	
+		add_shortcode(
+		    'our_fake_shortcode',
+		    'fake_shortcode_function'
+		);
+		
+		function fake_shortcode_function() {
+		    ob_start();
+		    echo 'REPLACED THAT SHORTCODE!!';
+		    include 'path/to/your/template.php';
+		    return ob_get_clean();
+		} 
+	
+- Example template.php: 
+	
+		<p class="fake-template-class">This post was titled: <?php the_title(); ?></p>
+		<?php custom_html_drawing_function(); ?>
+	
+- [link](https://wpshout.com/understanding-php-output-buffering-and-why-its-great-for-shortcodes/), tags: `php` `wordpress`
 
 __March, 16 2017:__
 
