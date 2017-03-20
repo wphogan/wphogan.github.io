@@ -53,8 +53,12 @@ __March, 15 2017:__ PHP Output Buffers are awesome
 
 __March, 16 2017:__
 
-- temp
-- tags: `temp`
+- Forever ignore .DS_Store from git repos!
+
+		$ git config --global core.excludesfile ~/.gitignore
+		$ echo .DS_Store >> ~/.gitignore
+		
+- tags: `git`
 
 __March, 17 2017:__
 
