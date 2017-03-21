@@ -53,8 +53,16 @@ __March, 15 2017:__ PHP Output Buffers are awesome
 
 __March, 16 2017:__
 
-- temp
-- tags: `temp`
+- When merging a feature branch to a master branch that is ahead by a commit or two, the merge requires an extra commit of the master into the feature. This can make the git history somewhat messy and hard to understand. 
+- As an alternative to git merging, you can rebase the feature branch onto master branch using the following commands:
+
+		git checkout feature
+		git rebase master
+		
+- Rebasing, compared to merging, makes for a cleaner, linear git history which is easy for other devs to understand. 
+- `git rebase -i master` will allow you to interact with the commits. With this, you can squash minor commits into larger commits by changing them to `fixup`, further cleaning up the git history and making it easier to understand.
+- Make sure to follow the "Golden Rules of Rebasing"
+- [link](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), tags: `temp`
 
 __March, 17 2017:__
 
