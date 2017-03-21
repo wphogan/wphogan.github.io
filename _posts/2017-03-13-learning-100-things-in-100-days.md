@@ -63,7 +63,9 @@ __March, 16 2017:__
 - `git rebase -i master` will allow you to interact with the commits. With this, you can squash minor commits into larger commits by changing them to `fixup`, further cleaning up the git history and making it easier to understand.
 - Make sure to follow the "Golden Rules of Rebasing"
 - [link](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), tags: `temp`
-=======
+
+__March, 17 2017:__
+
 - Forever ignore .DS_Store from git repos!
 
 		$ git config --global core.excludesfile ~/.gitignore
@@ -71,15 +73,64 @@ __March, 16 2017:__
 		
 - tags: `git`
 
-__March, 17 2017:__
+__March, 18 2017:__ Notes from [CSS for Grownups](https://www.youtube.com/watch?v=ZpFdyfs03Ug) talk
 
-- temp
-- tags: `temp`
+##### How to create a maintainable code base:
 
-__March, 18 2017:__
+- __components__ -- should be able to build a component and forget about it. Place it and expect it to work. This is how manage complex systems -- modularize.
+- We need to build our own constraints into CSS. Think about how we structure, organize, architect code.
+- Code quality:
 
-- temp
-- tags: `temp`
+  - performant
+  - correctness
+  - web 2.0 compliant & wcag compliant
+  - extensible
+  - reliable
+  - reusable
+  - passable
+  - testable
+  - easily understood
+
+- optimize code for change (aka maintainability). Code needs to be clear, simple, explicit, with good documentation. 
+- We need to be able to confidently and quickly make changes, add new features.
+- Good sources for inspiration: OOCSS, SMACSS, CSS Lint
+
+
+Layers of CSS: 
+
+  - Base styles
+  - Modules styles
+  - Layout styles
+
+Decouple markup from styles to maximize scalability. Not scalable: 
+
+	.promo-box {
+	  color: red;
+	  background: black;
+	}
+	.promo-box h3 {
+	  font-size: 15px;  
+	}
+
+
+Scalable:
+
+	.promo-box .sub-heading {
+	   font-size: 15px; 
+	}
+
+What you gain in cleaner html markup, you lose in simplicity.
+
+Use .h2, .h3 instead of h2, h3
+
+Media queries on a specific element: can use "Selector Queries" javascript library. Adds classes to modules based on their size.
+
+The benefits of documenting CSS:
+Style-guides and module libraries -- these are the places design and dev come together. Facilitates better collaboration between devs and designers.
+
+Questions: How to automatically build a style guide? Fabrctr? Maybe make a module library with all the modules?
+
+- tags: `css`
 
 __March, 19 2017:__
 
