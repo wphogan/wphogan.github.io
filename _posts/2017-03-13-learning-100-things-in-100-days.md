@@ -63,6 +63,13 @@ __March, 16 2017:__
 - `git rebase -i master` will allow you to interact with the commits. With this, you can squash minor commits into larger commits by changing them to `fixup`, further cleaning up the git history and making it easier to understand.
 - Make sure to follow the "Golden Rules of Rebasing"
 - [link](https://www.atlassian.com/git/tutorials/merging-vs-rebasing), tags: `temp`
+=======
+- Forever ignore .DS_Store from git repos!
+
+		$ git config --global core.excludesfile ~/.gitignore
+		$ echo .DS_Store >> ~/.gitignore
+		
+- tags: `git`
 
 __March, 17 2017:__
 
