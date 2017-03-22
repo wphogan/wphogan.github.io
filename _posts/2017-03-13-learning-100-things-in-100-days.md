@@ -83,7 +83,7 @@ __March, 18 2017:__ Notes from [CSS for Grownups](https://www.youtube.com/watch?
 
   - performant
   - correctness
-  - web 2.0 compliant & wcag compliant
+  - web 2.0 compliant & WCAG compliant
   - extensible
   - reliable
   - reusable
@@ -132,15 +132,21 @@ Questions: How to automatically build a style guide? Fabrctr? Maybe make a modul
 
 - tags: `css`
 
-__March, 19 2017:__
+__March, 19 2017:__ Change Management 
 
-- temp
-- tags: `temp`
+- Not explicitly related to WordPress or web development, but very relevant when working with a team and introducing new workflows / tools / methodologies / etc. 
 
-__March, 20 2017:__
+![Managing Complex Change](https://lh3.googleusercontent.com/-ZQ2Wro8y55Q/VT14xhFJvAI/AAAAAAAAV0A/9S9b7I542aA/w2048-h1536/Managing%2BComplex%2BChange.jpg)
 
-- temp
-- tags: `temp`
+- And for larger teams, Kotter's Change Management Model:
+![Kotters Change Mgmt](http://www.eurogeography.eu/SoC/guidelines/change-management-big.jpg)
+
+__March, 20 2017:__ Yarn is a lot faster than NPM
+
+- Yarn installs faster and creates a lock file that ensures every dev on a project is using the same dependencies. 
+- install it globally: `npm install -g yarn`
+- install modules from a `package.json` file: `yarn install`
+- [link](https://www.youtube.com/watch?v=OCW3Jz6F8Ek&index=48&list=WL&t=26s), tags: `gulp` `yarn` `npm`
 
 __March, 21 2017:__
 
