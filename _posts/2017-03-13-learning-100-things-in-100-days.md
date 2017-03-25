@@ -148,19 +148,32 @@ __March, 20 2017:__ Yarn is a lot faster than NPM
 - install modules from a `package.json` file: `yarn install`
 - [link](https://www.youtube.com/watch?v=OCW3Jz6F8Ek&index=48&list=WL&t=26s), tags: `gulp` `yarn` `npm`
 
-__March, 21 2017:__
+__March, 21 2017:__ Best-practice for headers
 
-- temp
-- tags: `temp`
+- H1 for site title on home page, then, NOT as a header on rest of the pages. On feed pages, article titles should be H2, but on single post, should be H1.
+	- Site title on homepage: h1
+	- Site title on all other pages: p (with appropriate aria tags, etc)
+- Ideal: keep titles to under 55 characters.
+- H1 should be page title. Next, headers should be sequential (H2 > H3 > H4 > etc.)
+- Idea for my work: Write a custom title function for all titles that knows when to use h1's and h2's for article/page/post/etc titles both on singular pages AND on feed pages. 
+- tags: `SEO`
 
 __March, 22 2017:__
 
-- temp
-- tags: `temp`
+- schema.org lists all the different schema types used on a website. It's very extensive. A few schemas include: book, movie, recipe, TVseries, creative works (blog posts, code snippets, etc), audio, event, health and medical types, organization, person, place, product, review, action. 
+- Requires some extra markup `itemprop`, `itemscope` etc.
+- Using this markup allows search engines to display specific content in the search results.
+- Can check out WordPress themes that have schema built in.
+- Check out a schema generator.
+- Schema Creator plugin is an option
+- Idea for my work: create a way for users to enter org address and have it generate schema markup in the footer.
+- Idea: create A light-weight XML site map generator
+- Go thru Yoast SEO to see how/what it does. What does the premium version do?
+- tags: `SEO`
 
-__March, 23 2017:__
+__March, 23 2017:__ WordPress site title function
 
-- temp
+- Since WP 4.1, this is best practice -- add this code to functions.php: `add_theme_support('title-tag');`. It automatically places the title in the header. This allows plugin developers to more easily edit title tag if they need to -- it's not longer hard-coded into the site. We can then edit the title tag by adding a filter. Good idea: set filter to only show title tag separator on subpages. 
 - tags: `temp`
 
 __March, 24 2017:__
