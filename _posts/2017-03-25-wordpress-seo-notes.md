@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WordPress SEO Notes
+title: Notes on WordPress SEO
 ---
 
 ## Introduction
