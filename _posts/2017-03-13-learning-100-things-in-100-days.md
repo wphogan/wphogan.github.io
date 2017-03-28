@@ -176,9 +176,23 @@ __March, 23 2017:__ WordPress site title function
 - Since WP 4.1, this is best practice -- add this code to functions.php: `add_theme_support('title-tag');`. It automatically places the title in the header. This allows plugin developers to more easily edit title tag if they need to -- it's not longer hard-coded into the site. We can then edit the title tag by adding a filter. Good idea: set filter to only show title tag separator on subpages. 
 - tags: `temp`
 
-__March, 24 2017:__
+__March, 24 2017:__ Highlights from Treehouse Web Accessibility course
 
-- temp
+- [Filterable and shareable WCAG checklist](https://www.w3.org/WAI/WCAG20/quickref/). This allow you to filter by the three WCAG levels (A, AA, and AAA). It also provides a shareable link to get an entire dev team on the same page for a given project.
+- HTML5 alternatives to div tags:
+	- header (can have multiple on one page -- can be used on post feeds)
+	- footer
+	- article 
+	- section
+	- nav
+	- main (just one!)
+	- button
+	- look up more
+	- aside
+- replace pxs with rems for more accessibly sites
+- chrome AND gulp plugin to audit accessibility
+- Skeleton CSS Boilerplate could be a perfect lightweight replacement for Bootstrap
+- Get better at using all 4 ARIA Roles (1. Landmark, 2. Document, 3. Widget, 4. Abstract)]
 - tags: `temp`
 
 __March, 25 2017:__
