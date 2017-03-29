@@ -5,6 +5,11 @@ categories: learning
 ---
 ## Goal: learn at least one thing related to WordPress or building websites everyday for the next 100 days and document it here.
 
+### Bin:
+ 
+- inline svg
+- 
+
 ### March
 
 __March, 14 2017:__ Three levels of [WCAG](https://www.w3.org/WAI/intro/wcag) 
@@ -195,10 +200,15 @@ __March, 24 2017:__ Highlights from Treehouse Web Accessibility course
 - Get better at using all 4 ARIA Roles (1. Landmark, 2. Document, 3. Widget, 4. Abstract)]
 - tags: `temp`
 
-__March, 25 2017:__
+__March, 25 2017:__ GitLab
 
-- temp
-- tags: `temp`
+- GitLab is a free, open source version of GitHub
+- Allows you to keep to-do lists, similar to Trello
+- Can be self hosted behind a VPN for maximum security
+- GitLab's "Pipelines" are scripts that deploy code. This takes the place of Code Ship.
+- GitLab has a git importer that allows you to import repos with issues, wikis, etc. 
+- Idea: setup GitLab as a document library with a wiki, in addition to hosting private repos
+- tags: `git`
 
 __March, 26 2017:__
 
