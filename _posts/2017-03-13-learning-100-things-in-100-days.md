@@ -210,15 +210,24 @@ __March, 25 2017:__ GitLab
 - Idea: setup GitLab as a document library with a wiki, in addition to hosting private repos
 - tags: `git`
 
-__March, 26 2017:__
+__March, 26 2017:__ PHP best practices
 
-- temp
+- Errors vs warnings -- errors are unrecoverable and cause a crash, warnings just echo a warning
+- Important to fix deprecation warnings as they will eventually become breaking errors when they're no longer supported
+- Semantic versioning ('semver') [major#.minor#.patch#]
+- Major change: major, backwards incompatible changes 
+- Minor change: backwards compatible changes
+- Patch change: bug fixes, performance patches, etc
+- Start with 0.1.0 -- leading 0 says API is not fully stable
+- [PSR-1](http://www.php-fig.org/psr/psr-1/) -- basic PHP coding standards that all PHP packages should follow
+- [PSR-2](http://www.php-fig.org/psr/psr-2/) -- code stylesheet <3
 - tags: `temp`
 
-__March, 27 2017:__
+__March, 27 2017:__ Site Reliability Engineering
 
-- temp
-- tags: `temp`
+- Today I learned what a Site Reliability Engineer is -- a combination of a system administrator and a software engineer. It's a highly specialized position that is very new. Essentially, they are Unix experts who also know programming. This blend of skills makes for some creative and automated solutions to problems that typically require many human hours to complete. 
+- When an issue arises, it's important to build in the time and capacity to document the problem and describe the solution. These solutions are compiled into a "playbook" which is then used when future issues arise. A good SRE will rely on a "playbook" to diagnose and solve problems and avoid winging it. 
+- [link](https://landing.google.com/sre/book.html)tags: `devops`
 
 __March, 28 2017:__
 
