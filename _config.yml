@@ -1,10 +1,10 @@
 # Site settings
-title: William P Hogan
+title: William Hogan
 email: whogan@ucsd.edu
 url: https://github.com/wphogan
 description: "I'm a PhD student studying Natural Language Processing at University of California, San Diego."
 keywords: "natural language processing, machine learning"
-skills: "Machine Learning - Natural Language Processing"
+skills: "PhD Student studying Natural Language Processing at UC San Diego"
 meta_author: Hogan William
 
 # Google webmaster tools
@@ -25,7 +25,7 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
+  primary: 2c3e50 #80B3FF
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
@@ -39,10 +39,16 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
+  - title: book
+    url: https://www.semanticscholar.org/author/2057941889
+  - title: graduation-cap
+    url: https://scholar.google.com/citations?user=wEzTKU4AAAAJ&hl=en
   - title: linkedin
     url: https://www.linkedin.com/in/wphogan/
   - title: github
     url: https://github.com/wphogan
+
+
 #  - title: facebook
 #    url:
 #  - title: stack-overflow

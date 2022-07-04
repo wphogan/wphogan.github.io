@@ -1,11 +1,11 @@
 ---
 layout: default
-modal-id: 3
-date: 2014-07-16
-img: circus.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+modal-id: 2
+title: Abstractified Multi-instance Learning (AMIL) for Biomedical Relation Extraction
+conference: AKBC
+year: 2021
+authors: <b>Hogan</b>, Huang, Katsis, Baldwin, Kim, Baeza, Bartko, Hsu
+pdf_link: https://openreview.net/pdf?id=VX0swzJEzpg
+code: https://github.com/IBM/aihn-ucsd/tree/master/amil
+video: https://www.youtube.com/watch?v=vNBAaE_uaUg&ab_channel=AKBCConference
 ---

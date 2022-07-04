@@ -1,11 +1,15 @@
 ---
 layout: default
-modal-id: 5
-date: 2014-07-14
-img: safe.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+title: Normalization of Predominant and Long-tail Bacterial Entities with a Hybrid CNN-LSTM
+conference: AKBC
+year: 2020
+authors: <b>Hogan</b>, Mehta, Baeza, Katsis, Kim, Bartko, Hsu
+pdf_link: https://scinlp.org/pdfs/normalization-of-predominant-and-long-tail-bacterial-entities-with-a-hybrid-cnn-lstm-and-knowledge-driven-model.pdf
+video: https://www.youtube.com/watch?v=FzfL9m6xPBc&ab_channel=UCSDNLP
+code: 
 ---
+
+
+ 
+
+      

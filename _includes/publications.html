@@ -1,0 +1,42 @@
+ <!-- Portfolio Grid Section -->
+    <section id="publications" class="section-dark">
+        <div class="container portfolio-flex-grid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Publications</h2>
+                    <hr class="star">
+                </div>
+            </div>
+            <div class="portfolio-flex-row">
+                {% for post in site.posts %}
+                    <div class="portfolio-flex-item portfolio-item">
+                        {% if post.pdf_link %}
+                        <a href="{{ post.pdf_link }}" class="portfolio-link" target="_blank">
+                        {% endif %}
+                            <h3>{{ post.title}}</h3>
+                        {% if post.pdf_link %}
+                        </a>
+                        {% endif %}
+
+                        <h5>{{ post.authors}} | {{ post.conference}}, {{ post.year}}</h5>
+
+                        <!-- PDF -->
+                        {% if post.pdf_link %}
+                        <a href="{{ post.pdf_link}}" data-toggle="tooltip" data-placement="bottom" title="View PDF" class="icon-link"><span class="material-symbols-outlined">picture_as_pdf</span></a>
+                        {% endif %}
+
+                        <!-- Code -->
+                        {% if post.code %}
+                        <a href="{{  post.code}}" data-toggle="tooltip" data-placement="bottom" title="View code" class="icon-link"><span class="material-symbols-outlined">terminal</span></a>
+                        {% endif %}
+
+                        <!-- Video -->
+                        {% if post.video %}
+                        <a href="{{ post.video }}" data-toggle="tooltip" data-placement="bottom" title="View video" class="icon-link"><span class="material-symbols-outlined">videocam</span></a>
+                        {% endif %}
+
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
