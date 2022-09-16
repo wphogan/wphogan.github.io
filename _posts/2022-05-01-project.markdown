@@ -1,0 +1,8 @@
+---
+layout: default
+title: An Overview of Distant Supervision for Relation Extraction with a Focus on Denoising and Pre-training Methods
+conference: arXiv
+year: 2022
+authors: <b>William Hogan</b>
+pdf_link: https://arxiv.org/pdf/2207.08286.pdf
+---
