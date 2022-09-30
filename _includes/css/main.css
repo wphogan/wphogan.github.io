@@ -52,7 +52,10 @@ h6 {
 h4 {
     font-weight: bold;
 }
-
+#about {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 /*Badge*/
 .badge {
     display: block;
