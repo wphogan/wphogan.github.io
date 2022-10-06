@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MDAD -- An Annotated Corpus for Disease-Bacterium Associations
+title: MDAD&mdash;An Annotated Corpus for Disease-Bacterium Associations
 conference: Work in progress
 year: 2022
 authors: Huang, <b>Hogan</b>, Katsis, Baldwin, Kim, Baeza, Bartko, Hsu
