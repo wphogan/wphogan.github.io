@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Fine-grained Contrastive Learning for Relation Extraction
-conference: Pre-print
+conference: EMNLP
 year: 2022
 authors: <b>Hogan</b>, Li, Shang
 pdf_link: https://arxiv.org/abs/2205.12491
