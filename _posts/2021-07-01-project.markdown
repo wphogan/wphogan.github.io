@@ -5,7 +5,7 @@ title: Abstractified Multi-instance Learning (AMIL) for Biomedical Relation Extr
 conference: AKBC
 year: 2021
 authors: <b>Hogan</b>, Huang, Katsis, Baldwin, Kim, Baeza, Bartko, Hsu
-pdf_link: https://openreview.net/pdf?id=VX0swzJEzpg
+pdf_link: https://www.akbc.ws/2021/assets/pdfs/VX0swzJEzpg.pdf
 code: https://github.com/IBM/aihn-ucsd/tree/master/amil
 video: https://www.youtube.com/watch?v=vNBAaE_uaUg&ab_channel=AKBCConference
 ---
