@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Open-world Semi-supervised Generalized Relation Discovery Aligned in a Real-world Setting
-conference: arXiv
-year: 2022
+conference: EMNLP
+year: 2023
 authors: <b>Hogan</b>, Li, Shang
 pdf_link: https://arxiv.org/abs/2305.13533
 ---
