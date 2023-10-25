@@ -6,5 +6,5 @@ year: 2022
 authors: <b>Hogan</b>, Li, Shang
 pdf_link: https://aclanthology.org/2022.emnlp-main.71
 code: https://github.com/wphogan/finecl
-video: https://youtu.be/HNyVAW6nVek
+video: https://underline.io/lecture/65361-fine-grained-contrastive-learning-for-relation-extraction
 ---
