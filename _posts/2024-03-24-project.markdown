@@ -1,0 +1,8 @@
+---
+layout: default
+title: READ -- Improving Relation Extraction from an ADversarial Perspective
+conference: NAACL
+year: 2024
+authors: Li, <b>Hogan</b>, Shang
+pdf_link: https://openreview.net/pdf?id=Aj7O3-Nr0FO
+---
