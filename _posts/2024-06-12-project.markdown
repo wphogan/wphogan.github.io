@@ -1,0 +1,8 @@
+---
+layout: default
+title: "Entangled Relations: NLI and Meta-analysis to Enhance Biomedical Relation Extraction"
+conference: TBD
+year: 2024
+authors: <b>Hogan</b>, Shang
+pdf_link: https://arxiv.org/abs/2406.00226
+---

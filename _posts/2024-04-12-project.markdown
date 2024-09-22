@@ -1,0 +1,8 @@
+---
+layout: default
+title: MiDRED&mdash;An Annotated Corpus for Microbiome Knowledge Base Construction
+conference: ACL
+year: 2024
+authors: <b>Hogan</b>, Bartko, Shang, Hsu
+pdf_link: https://aclanthology.org/2024.bionlp-1.31/
+---

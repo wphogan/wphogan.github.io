@@ -1,0 +1,8 @@
+---
+layout: default
+title: DAIL&mdash;Data Augmentation for In-Context Learning via Self-Paraphrase
+conference: arXiv
+year: 2024
+authors: Li, Y. Li, Mekala, S. Li, Y. Wang, X. Wang, <b>Hogan</b>, Shang
+pdf_link: https://arxiv.org/abs/2311.03319
+---

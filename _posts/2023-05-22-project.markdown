@@ -6,4 +6,5 @@ year: 2023
 authors: <b>Hogan</b>, Li, Shang
 pdf_link: https://aclanthology.org/2023.emnlp-main.880/
 code: https://github.com/wphogan/knord
+video: https://s3.amazonaws.com/pf-user-files-01/u-59356/uploads/2023-11-03/8832pqk/emnlp_2023_knord.mp4
 ---

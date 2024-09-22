@@ -1,9 +1,0 @@
----
-layout: default
-title: MDAD&mdash;An Annotated Corpus for Disease-Bacterium Associations
-conference: Work in progress
-year: TBD
-authors: Huang, <b>Hogan</b>, Katsis, Baldwin, Kim, Baeza, Bartko, Hsu
-pdf_link:
-code: 
----

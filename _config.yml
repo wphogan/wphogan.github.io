@@ -1,11 +1,11 @@
 # Site settings
-title: William Hogan
+title: William P. Hogan
 email: whogan@ucsd.edu
 url: https://github.com/wphogan
 description: "Ph.D. candidate studying Natural Language Processing at the University of California, San Diego."
 keywords: "natural language processing, machine learning"
 skills: "Ph.D. candidate studying Natural Language Processing at UC San Diego"
-meta_author: Hogan William
+meta_author: William P. Hogan
 
 # Google webmaster tools
 google_verify:
@@ -58,7 +58,7 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: San Diego, CA
+  - line: Mountain View, CA
   #- line: Beverly Hills, CA 90210
 
 # Credits content
