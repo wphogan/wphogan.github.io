@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Entangled Relations: NLI and Meta-analysis to Enhance Biomedical Relation Extraction"
-conference: TBD
+conference: NAACL
 year: 2025
 authors: <b>Hogan</b>, Shang
 pdf_link: https://arxiv.org/abs/2406.00226
